@@ -1,0 +1,10 @@
+{
+    "name": "User auth API",
+    "description": "a simple api using jwt to user login and registration",
+    "keywords": [
+      "node",
+      "express",
+      "api"
+    ],
+    "repository": "https://github.com/TahaAlamiIdrissi/heroku-deploy"
+}
