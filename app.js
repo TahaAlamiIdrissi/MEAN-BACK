@@ -9,7 +9,7 @@ require("dotenv/config");
 
 //import the routes
 const userRoutes = require('./routes/api/users');
-
+const gitRoutes = require('./routes/api/github');
 //connect to database
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, err =>
   err ? console.log(err) : console.log("CONNECTED SUCCESSFULY")
@@ -17,6 +17,6 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, err =>
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/api/users',userRoutes);
-
+app.use('/api/git',gitRoutes);
 
 app.listen(PORT, () => console.log("Listening on PORT " + PORT));
