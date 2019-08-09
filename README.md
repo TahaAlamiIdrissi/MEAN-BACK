@@ -1,4 +1,4 @@
-# Project Title
+# REST API (Express)
 
 API for Users to see their github repos
 
