@@ -12,12 +12,21 @@ npm install
 npm start
 
 ```
-### Prerequisites
+### .GITIGNORE
 
-What things you need to install the software and how to install them
-
+After checking the .gitignore file make sure you did run 
 ```
-Give examples
+npm install 
+```
+or 
+```
+npm i 
+```
+after that make sure to create a .env file on the root folder 
+and to add your mongoose connection details + your TOKEN_SECRET
+```
+DB_CONNECT=.....
+TOKEN_SECRET= .....
 ```
 
 ### Installing
