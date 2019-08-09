@@ -5,10 +5,11 @@ const verify = require('../../verifyToken');
 
 // api GET /api/git/repos
 // goal git taha's repos
+// change TahaAlamiIdrissi with your Username
 // private
 router.get("/repos",verify, (req, res) => {
   const options = {
-    url: `https://api.github.com/users/TahaAlamiIdrissi/repos?state=closed&access_token=974a7c04c7ccf6b9b9ff808e29d1b1300a828364`,
+    url: `https://api.github.com/users/TahaAlamiIdrissi/repos`,
     headers: {
       "User-Agent": "TahaAlamiIdrissi"
     }
@@ -41,7 +42,7 @@ router.get("/repos/:Username",(req, res) => {
   const username = req.params.Username;
 
   const options = {
-    url: `https://api.github.com/users/${username}/repos?state=closed&access_token=974a7c04c7ccf6b9b9ff808e29d1b1300a828364`,
+    url: `https://api.github.com/users/${username}/repos`,
     headers: {
       "User-Agent": "TahaAlamiIdrissi"
     }
