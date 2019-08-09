@@ -14,8 +14,14 @@ const User = require("../../models/User");
 // api GET /api/users/test
 // goal testing route
 // public
-router.get("/test", (req, res) => {
-  res.send("Testing route");
+router.get("/:userEmail",async (req, res) => {
+  const email = req.params.userEmail;
+  const user = await User.findOne({email});
+  try {
+      res.status(200).send({username: user.name});
+  } catch (error) {
+    res.status(400).send(error);
+  }
 });
 // api GET /api/users/test
 // goal testing route
@@ -35,11 +41,11 @@ router.get("/",async (req, res) => {
 router.post("/register", async (req, res) => {
   //validate the data
   const { error } = registerValidation(req.body);
-  if (error) return res.status(400).send({ message: error.details[0].message });
+  if (error) return res.send({ message: error.details[0].message });
   //check if the email already exists
   const existingEmail = await User.findOne({ email: req.body.email });
   if (existingEmail)
-    return res.status(400).send({ message: "Email Already Exist" });
+    return res.send({ message: "Email Already Exist" });
   //hash the password !
   const salt = await bcrypt.genSalt(10);
   const hashPass = await bcrypt.hash(req.body.password, salt);
