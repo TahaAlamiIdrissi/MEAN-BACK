@@ -1,11 +1,17 @@
 # Project Title
 
-Get your github repos after authenticating
+API for Users to see their github repos
 
-## Getting Started
+## Installation
+Clone, install, and start up the app.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+```
+git clone https://github.com/TahaAlamiIdrissi/MEN-part-of-MEAN-API-
+cd MEN-part-of-MEAN-API-
+npm install
+npm start
 
+```
 ### Prerequisites
 
 What things you need to install the software and how to install them
