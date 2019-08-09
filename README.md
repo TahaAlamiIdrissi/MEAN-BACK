@@ -6,8 +6,8 @@ API for Users to see their github repos
 Clone, install, and start up the app.
 
 ```
-git clone https://github.com/TahaAlamiIdrissi/MEN-part-of-MEAN-API-
-cd MEN-part-of-MEAN-API-
+git clone https://github.com/TahaAlamiIdrissi/gitRepos
+cd gitRepos
 npm install
 npm start
 
